@@ -1,0 +1,41 @@
+﻿@model CRUDDemo.Models.EmployeeInfo
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+<div>
+    <h4>Employee Information</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Nombre)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Genero)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Genero)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Compañia)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Compañia)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Departamento)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Departamento)
+        </dt>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID"/>
+        <input type="submit" value="Delete" class="btn btn-danger"/>
+        
+    </form>
+</div>
